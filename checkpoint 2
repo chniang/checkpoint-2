@@ -1,1 +1,17 @@
 http://localhost:8888/notebooks/Untitled.ipynb
+
+
+
+print("Bienvenue dans le jeu Devinez le nombre ! Je pense a un nombre entre 1 et 100, pouvez vous le devinez ?")
+import random
+nombre_aleatoire=random.randint(1,1000)
+supposition = 0
+while supposition != nombre_aleatoire:
+    supposition=int(input("entrer votre supposition entre 1 et 100"))
+    if supposition < nombre_aleatoire:
+        print("votre supposition est trop basse,essayez un nombre plus eleve")
+    elif supposition > nombre_aleatoire:
+        print("votre supposition est trop elevee,essayez un nombre plus bas")
+    else:
+        print("felicitation ! vous avez trouve")
+
